@@ -8,26 +8,19 @@
 
     #holder {
 
-        position: relative;   /* leave as "relative" to keep timer centered on your
-
+        position: absolute;   /* leave as "relative" to keep timer centered on your
                                  page, or change to "absolute" then change the
-
                                  values of the "top" and "left" properties to
-
                                  position the timer */
 
-        top: 10px;            /* change to position the timer */
-
-        left: 0px;            /* change to position the timer; must also change
+        top: 2px;            /* change to position the timer */
+        left: 3px;            /* change to position the timer; must also change
 
                                  position to "absolute" above */
 
-        width: 270px;
-
-        height: 60px;
-
+        width: 0px;
+        height: 0px;
         border: none;
-
         margin: 0px auto;
 
     }
@@ -55,82 +48,103 @@
     #note {
 
         position: relative;
-
         top: 6px;
-
         height: 20px;
-
-        width: 260px;
-
+        width: 0px;
         margin: 0 auto;
-
         padding: 0px;
-
         text-align: center;
-
         font-family: Arial;
-
         font-size: 18px;
-
         font-weight: bold;    /* options are normal, bold, bolder, lighter */
-
         font-style: normal;   /* options are normal or italic */
-
         z-index: 1;
-
     }
 
 
     .title {
 
         border: none;
-
         padding: 0px;
-
         margin: 0px;
-
-        width: 30px;
-
+        width: 0px;
         text-align: center;
-
         font-family: Arial;
-
         font-size: 10px;
-
         font-weight: normal;    /* options are normal, bold, bolder, lighter */
-
         background-color: transparent;
 
     }
 
 
-    #timer {
+    #timer_day {
 
-        position: relative;
-
-        top: 0px;
-
-        left: 0px;
-
-        margin: 5px auto;
-
+        position: absolute;
+        top: 170px;
+        left: 200px;
+        margin: 0px auto;
         text-align: center;
-
         width: 260px;
-
-        height: 26px;
-
+        height: 0px;
         border: none;
-
-        padding: 10px 5px 20px 5px;
-
-        background: #000000;    /* may change to another color, or to "transparent" */
-
-        border-radius: 20px;
-
-        box-shadow: 0 0 10px #000000; /* change to "none" if you don't want a shadow */
-
+        padding: none;
+        background: transparent;    /* may change to another color, or to "transparent" */
+        border-radius: 0px;
+        box-shadow: none; /* change to "none" if you don't want a shadow */
     }
+
+    #timer_hr {
+
+        position: absolute;
+        top: 307px;
+        left: 50px;
+        margin: 0px auto;
+        text-align: center;
+        width: 260px;
+        height: 0px;
+        border: none;
+        padding: none;
+        background: transparent;    /* may change to another color, or to "transparent" */
+        border-radius: 0px;
+        box-shadow: none; /* change to "none" if you don't want a shadow */
+    }
+
+
+    #timer_min {
+
+        position: absolute;
+        top: 307px;
+        left: 230px;
+        margin: 0px auto;
+        text-align: center;
+        width: 260px;
+        height: 0px;
+        border: none;
+        padding: none;
+        background: transparent;    /* may change to another color, or to "transparent" */
+        border-radius: 0px;
+        box-shadow: none; /* change to "none" if you don't want a shadow */
+    }
+
+    #timer_sec {
+
+        position: absolute;
+        top: 307px;
+        left: 415px;
+        margin: 0px auto;
+        text-align: center;
+        width: 260px;
+        height: 0px;
+        border: none;
+        padding: none;
+        background: transparent;    /* may change to another color, or to "transparent" */
+        border-radius: 0px;
+        box-shadow: none; /* change to "none" if you don't want a shadow */
+    }
+
+
+
+
 
     </style>
 
@@ -138,81 +152,47 @@
     <script type="text/javascript">
 
     /*
-
     Count down until any date script-
-
     By JavaScript Kit (www.javascriptkit.com)
-
     Over 200+ free scripts here!
-
     Modified by Robert M. Kuhnhenn, D.O.
-
     (www.rmkwebdesign.com/Countdown_Timers/)
-
     on 5/30/2006 to count down to a specific date AND time,
-
     on 10/20/2007 to a new format, on 1/10/2010 to include
-
     time zone offset, and on 7/12/2012 to digital numbers.
-
     */
 
 
     /* 
-
     Change the items noted in light blue below to create your countdown target
-
     date and announcement once the target date and time are reached.
-
     */
 
-    var note="Winter has arrived!";    /* -->Enter what you want the script to
-
+    var note="It's Kickoff!!";    /* -->Enter what you want the script to
                                              display when the target date and time
-
                                              are reached, limit to 25 characters */
-
     var year=2016;      /* -->Enter the count down target date YEAR */
-
-    var month=12;       /* -->Enter the count down target date MONTH */
-
-    var day=21;         /* -->Enter the count down target date DAY */
-
-    var hour=6;         /* -->Enter the count down target date HOUR (24 hour
-
+    var month=2;       /* -->Enter the count down target date MONTH */
+    var day=27;         /* -->Enter the count down target date DAY */
+    var hour=8;         /* -->Enter the count down target date HOUR (24 hour
                               clock) */
-
-    var minute=12;      /* -->Enter the count down target date MINUTE */
-
-    var tz=-5;          /* -->Offset for your timezone in hours from UTC (see
-
+    var minute=0;      /* -->Enter the count down target date MINUTE */
+    var tz=-8;          /* -->Offset for your timezone in hours from UTC (see
                               http://wwp.greenwichmeantime.com/index.htm to find
-
                               the timezone offset for your location) */
 
 
     //-->    DO NOT CHANGE THE CODE BELOW!    <--
-
     d1 = new Image(); d1.src = "digital-numbers/1.png";
-
     d2 = new Image(); d2.src = "digital-numbers/2.png";
-
     d3 = new Image(); d3.src = "digital-numbers/3.png";
-
     d4 = new Image(); d4.src = "digital-numbers/4.png";
-
     d5 = new Image(); d5.src = "digital-numbers/5.png";
-
     d6 = new Image(); d6.src = "digital-numbers/6.png";
-
     d7 = new Image(); d7.src = "digital-numbers/7.png";
-
     d8 = new Image(); d8.src = "digital-numbers/8.png";
-
     d9 = new Image(); d9.src = "digital-numbers/9.png";
-
     d0 = new Image(); d0.src = "digital-numbers/0.png";
-
     bkgd = new Image(); bkgd.src = "digital-numbers/bkgd.gif";
 
 
@@ -275,7 +255,7 @@
 
             document.getElementById('note').style.display="none";
 
-            document.getElementById('timer').style.display="block";
+            document.getElementById('timer_sec').style.display="block";
 
             startTimer = setTimeout("countdown(theyear,themonth,theday,thehour,theminute)",500);
 
@@ -382,49 +362,85 @@
 
 <body onload="countdown(year,month,day,hour,minute)">
 
+    <img  src="CountDownformal(revised).jpg" style='position:absolute; top:0px; left:0px; width:720px; border:0;' >
+
+
+
+
+
     <div id="holder">
-
-        <div id="timer">
-
+        <div id="timer_day">
             <div id="note"></div>
 
             <div id="countdown">
 
-                <img height=21 src="digital-numbers/bkgd.gif" width=16 name="day1">
+                 
+                <img height=120 src="digital-numbers/bkgd.gif" width=60 name="day1">
+                <img height=120 src="digital-numbers/bkgd.gif" width=60 name="day2">
+                <img height=120 src="digital-numbers/bkgd.gif" width=60 name="day3">
+            </div>
+        </div>
+    </div>
+                
 
-                <img height=21 src="digital-numbers/bkgd.gif" width=16 name="day2">
+                <!--
+                <img height=42 id="colon1" src="digital-numbers/colon.png" width=9 name="d1">
+                <img height=42 id="colon2" src="digital-numbers/colon.png" width=9 name="g1">
+                <img height=42 id="colon3" src="digital-numbers/colon.png" width=9 name="j1">
+                -->
+                
 
-                <img height=21 src="digital-numbers/bkgd.gif" width=16 name="day3">
+    <div id="holder">
+        <div id="timer_hr">
+            <div id="note"></div>
 
-                <img height=21 id="colon1" src="digital-numbers/colon.png" width=9 name="d1">
+            <div id="countdown">
+                <img height=80 src="digital-numbers/bkgd.gif" width=40 name="h1">
+                <img height=80 src="digital-numbers/bkgd.gif" width=40 name="h2">
+            </div>
+        </div>
+    </div>
 
-                <img height=21 src="digital-numbers/bkgd.gif" width=16 name="h1">
 
-                <img height=21 src="digital-numbers/bkgd.gif" width=16 name="h2">
 
-                <img height=21 id="colon2" src="digital-numbers/colon.png" width=9 name="g1">
+    <div id="holder">
+        <div id="timer_min">
+            <div id="note"></div>
 
-                <img height=21 src="digital-numbers/bkgd.gif" width=16 name="m1">
+            <div id="countdown">
+                <img height=80 src="digital-numbers/bkgd.gif" width=40 name="m1">
+                <img height=80 src="digital-numbers/bkgd.gif" width=40 name="m2">
+            </div>
+        </div>
+    </div>
+                
 
-                <img height=21 src="digital-numbers/bkgd.gif" width=16 name="m2">
 
-                <img height=21 id="colon3" src="digital-numbers/colon.png" width=9 name="j1">
 
-                <img height=21 src="digital-numbers/bkgd.gif" width=16 name="s1">
 
-                <img height=21 src="digital-numbers/bkgd.gif" width=16 name="s2">
+    <div id="holder">
+        <div id="timer_sec">
+            <div id="note"></div>
 
+            <div id="countdown">
+                <img height=80 src="digital-numbers/bkgd.gif" width=40 name="s1">
+                <img height=80 src="digital-numbers/bkgd.gif" width=40 name="s2">
+
+                
+            </div>
+        </div>
+    </div>
+    
+                <!--
                 <div id="title">
-
                     <div class="title" style="position: absolute; top: 36px; left: 42px">DAYS</div>
-
                     <div class="title" style="position: absolute; top: 36px; left: 105px">HRS</div>
-
                     <div class="title" style="position: absolute; top: 36px; left: 156px">MIN</div>
-
                     <div class="title" style="position: absolute; top: 36px; left: 211px">SEC</div>
 
                 </div>
+
+                -->
 
             </div>
 
