@@ -22,7 +22,7 @@ navigate to the LXDE autostart file: cd ~/.config/lxsession/LXDE-pi/
 
 edit the autostart file: sudo nano autostart
 
-add the following line to the bottom: @/home/pi/Desktop/auto_digilent/auto_run.sh
+add the following line to the bottom: @/home/pi/Desktop/countdown/script.sh
 
 Then, close the file (CTRL-X, then "Y").
 
