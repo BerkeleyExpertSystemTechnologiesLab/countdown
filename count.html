@@ -78,68 +78,74 @@
 
 
     #timer_day {
+        #background: red;    /* may change to another color, or to "transparent" */
+        #border-radius: 0px;
+        #box-shadow: none; /* change to "none" if you don't want a shadow */
+		position: absolute;
+		margin: auto;
+		top: 0;
+		right: 0;
+		bottom: 9%;
+		left: 0;
+		width: 250px;
+		height: 100px;
+		padding: none;
+		border: none;
 
-        position: absolute;
-        top: 170px;
-        left: 200px;
-        margin: 0px auto;
-        text-align: center;
-        width: 260px;
-        height: 0px;
-        border: none;
-        padding: none;
-        background: transparent;    /* may change to another color, or to "transparent" */
-        border-radius: 0px;
-        box-shadow: none; /* change to "none" if you don't want a shadow */
     }
 
     #timer_hr {
 
-        position: absolute;
-        top: 307px;
-        left: 50px;
-        margin: 0px auto;
-        text-align: center;
-        width: 260px;
-        height: 0px;
-        border: none;
-        padding: none;
-        background: transparent;    /* may change to another color, or to "transparent" */
-        border-radius: 0px;
-        box-shadow: none; /* change to "none" if you don't want a shadow */
+ 		#background: red;    /* may change to another color, or to "transparent" */
+        #border-radius: 0px;
+        #box-shadow: none; /* change to "none" if you don't want a shadow */
+		position: absolute;
+		margin: auto;
+		top: 45%;
+		right: 50%;
+		bottom: 0;
+		left: 0%;
+		width: 100px;
+		height: 100px;
+		padding: none;
+		border: none;
     }
 
 
     #timer_min {
 
-        position: absolute;
-        top: 307px;
-        left: 230px;
-        margin: 0px auto;
-        text-align: center;
-        width: 260px;
-        height: 0px;
-        border: none;
-        padding: none;
-        background: transparent;    /* may change to another color, or to "transparent" */
-        border-radius: 0px;
-        box-shadow: none; /* change to "none" if you don't want a shadow */
+ 		#background: red;    /* may change to another color, or to "transparent" */
+        #border-radius: 0px;
+        #box-shadow: none; /* change to "none" if you don't want a shadow */
+		position: absolute;
+		margin: auto;
+		top: 45%;
+		right: 0%;
+		bottom: 0;
+		left: 0%;
+		width: 100px;
+		height: 100px;
+		padding: none;
+		border: none;
+		
     }
 
     #timer_sec {
 
-        position: absolute;
-        top: 307px;
-        left: 415px;
-        margin: 0px auto;
-        text-align: center;
-        width: 260px;
-        height: 0px;
-        border: none;
-        padding: none;
-        background: transparent;    /* may change to another color, or to "transparent" */
-        border-radius: 0px;
-        box-shadow: none; /* change to "none" if you don't want a shadow */
+ 		#background: red;    /* may change to another color, or to "transparent" */
+        #border-radius: 0px;
+        #box-shadow: none; /* change to "none" if you don't want a shadow */
+		position: absolute;
+		margin: auto;
+		top: 45%;
+		right: 00%;
+		bottom: 0;
+		left: 50%;
+		width: 100px;
+		height: 100px;
+		padding: none;
+		border: none;
+		
     }
 
 
@@ -362,13 +368,9 @@
 
 <body onload="countdown(year,month,day,hour,minute)">
 
-    <img  src="Scrimmage_Panda.jpg" style='position:absolute; top:0px; left:0px; width:720px; border:0;' >
+    <img  src="Skydeck_Squishy_Countdown.png" style='position:absolute; top:0px; left:0px; width:100%; border:0;' >
 
 
-
-
-
-    <div id="holder">
         <div id="timer_day">
             <div id="note"></div>
 
@@ -380,7 +382,6 @@
                 <img height=120 src="digital-numbers/bkgd.gif" width=60 name="day3">
             </div>
         </div>
-    </div>
                 
 
                 <!--
@@ -390,7 +391,6 @@
                 -->
                 
 
-    <div id="holder">
         <div id="timer_hr">
             <div id="note"></div>
 
@@ -399,11 +399,8 @@
                 <img height=80 src="digital-numbers/bkgd.gif" width=40 name="h2">
             </div>
         </div>
-    </div>
 
 
-
-    <div id="holder">
         <div id="timer_min">
             <div id="note"></div>
 
@@ -412,13 +409,11 @@
                 <img height=80 src="digital-numbers/bkgd.gif" width=40 name="m2">
             </div>
         </div>
-    </div>
                 
 
 
 
 
-    <div id="holder">
         <div id="timer_sec">
             <div id="note"></div>
 
@@ -429,7 +424,6 @@
                 
             </div>
         </div>
-    </div>
     
                 <!--
                 <div id="title">
