@@ -12,6 +12,8 @@ In my case, used an edimax AC600.  Install instructions here: https://edimax.fre
 
 3. clone this repo to ~.  "git clone ...."
 
+4. install xte.  Run "sudo apt-get install xautomation
+
 4. Make sure date is correctly set, and that ntpdate is running so date is correctly set after a reboot.
 
 Note that ntp and/or openNTP don't work on cal visitor.  You either need to be on a different wifi, or figure out a workaround to get the time on boot.
