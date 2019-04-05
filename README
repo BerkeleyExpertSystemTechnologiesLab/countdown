@@ -1,4 +1,4 @@
-A countdown clock in HTML.
+\A countdown clock in HTML.
 
 Mostly because doug fried his countdown clock.
 
@@ -25,4 +25,11 @@ edit the autostart file: sudo nano autostart
 add the following line to the bottom: @/home/pi/Desktop/countdown/script.sh
 
 Then, close the file (CTRL-X, then "Y").
+
+6a. To change the image, look at line 371 of count.html
+6b. To change the size of the image, play around with line 371.
+6c. To change the resolution of the monitor, you may need to manually walk the location of the numbers in.
+
+Position is done  in the CSS, whereas the character size is done in the HTML
+
 
